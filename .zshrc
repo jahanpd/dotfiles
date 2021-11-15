@@ -73,9 +73,11 @@ ZSH_THEME="gnzh"
 plugins=(
     git
     fasd
+    tmux
 )
 
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
