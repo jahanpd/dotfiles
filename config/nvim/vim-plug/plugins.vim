@@ -21,5 +21,11 @@ call plug#begin('~/.dotfiles/config/nvim/autoload/plugged')
     Plug 'romgrk/barbar.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
     Plug 'p00f/nvim-ts-rainbow'
+    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'vim-scripts/dbext.vim'
 
 call plug#end()
+
+lua require 'colorizer'.setup()

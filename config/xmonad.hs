@@ -42,6 +42,7 @@ import XMonad.Layout.ResizableTile
 import XMonad.Layout.WindowArranger (windowArrange, WindowArrangerMsg(..))
 import qualified XMonad.Layout.ToggleLayouts as T (toggleLayouts, ToggleLayout(Toggle))
 import qualified XMonad.Layout.MultiToggle as MT (Toggle(..))
+import XMonad.Layout.Gaps
 
 import XMonad.Layout.Spacing
 
@@ -263,7 +264,7 @@ full =
         Full
 
 myLayout =
-  avoidStruts $ smartBorders myDefaultLayout
+  gaps [(U,20)] $ avoidStruts $ smartBorders myDefaultLayout
   --smartBorders myDefaultLayout
   where
     myDefaultLayout = tall ||| Mirror tall ||| full
@@ -337,6 +338,7 @@ myStartupHook = do
     spawnOnce "xrandr --output DP-2 --mode 5120x1440 --rate 60"
     spawnOnce "nitrogen --restore &"
     spawnOnce "xcompmgr &"
+    spawnOnce "xmobar ~/.dotfiles/config/.xmobarrc &"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 

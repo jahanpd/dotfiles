@@ -114,3 +114,15 @@ alias toggle="alacritty-colorscheme -V toggle $LIGHT_COLOR $DARK_COLOR"
 
 EDITOR="nvim"
 alias vi="nvim"
+
+# add to path
+export PATH=~/.local/bin/:$PATH
+
+# useful functions
+
+function venv {
+    source ~/envs/$1/bin/activate
+}
+function cleartemp {
+    ls ~/temp | xargs rm -r
+}

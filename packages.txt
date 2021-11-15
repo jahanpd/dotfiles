@@ -14,12 +14,13 @@ openssh
 pulseaudio
 stack
 sudo
-tbsm
+tmux
 vim
 visual-studio-code-bin
 xcompmgr
 xmonad
 xmonad-contrib
+xmobar
 xorg
 xsel
 xterm
