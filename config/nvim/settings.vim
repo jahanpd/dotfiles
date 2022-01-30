@@ -40,3 +40,9 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 
 " You can't stop me
 cmap w!! w !sudo tee %
+
+" for autopairs plugin
+let g:AutoPairsShortcutToggle = '<C-S-a>'
+let g:AutoPairsShortcutFastWrap = '<C-S-e>'
+let g:AutoPairsShortcutJump = '<C-S-n>'
+let g:AutoPairsShortcutBackInsert = '<C-S-b>'

@@ -13,7 +13,7 @@ call plug#begin('~/.dotfiles/config/nvim/autoload/plugged')
     " File Explorer
     Plug 'scrooloose/NERDTree'
     " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
+    " Plug 'jiangmiao/auto-pairs'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'chriskempson/base16-vim'
     Plug 'nvim-lualine/lualine.nvim'
@@ -25,7 +25,9 @@ call plug#begin('~/.dotfiles/config/nvim/autoload/plugged')
     Plug 'vim-pandoc/vim-pandoc'
     Plug 'vim-pandoc/vim-pandoc-syntax'
     Plug 'vim-scripts/dbext.vim'
+    Plug 'tpope/vim-surround'
 
 call plug#end()
 
 lua require 'colorizer'.setup()
+

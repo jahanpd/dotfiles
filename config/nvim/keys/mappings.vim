@@ -58,3 +58,7 @@ inoremap <silent> <F11> <C-O>:set spell!<cr>
 " remaps for folding
 nnoremap <Leader>z :set nofoldenable <CR>
 
+" remap for surround in brackets etc
+nnoremap <Leader>( bcw()<Esc>P
+nnoremap <Leader>" bcw""<Esc>P
+nnoremap <Leader>' bcw''<Esc>P

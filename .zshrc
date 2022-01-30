@@ -107,8 +107,8 @@ alias zshconfig="nvim ~/.zshrc"
 
 alias theme="alacritty-colorscheme"
 
-LIGHT_COLOR='base16-atelier-dune-light.yml'
-DARK_COLOR='base16-atelier-dune.yml'
+LIGHT_COLOR='base16-atelier-plateau-light.yml'
+DARK_COLOR='base16-atelier-plateau.yml'
 
 alias day="alacritty-colorscheme -V apply $LIGHT_COLOR"
 alias night="alacritty-colorscheme -V apply $DARK_COLOR"

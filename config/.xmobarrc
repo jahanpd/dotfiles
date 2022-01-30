@@ -1,10 +1,10 @@
 Config { 
 
    -- appearance
-     font =         "xft:Bitstream Vera Sans Mono:size=14:bold:antialias=true"
+     font =         "xft:Hack:size=12:antialias=true"
    , bgColor =      "#20201d"
    , fgColor =      "#a6a28c"
-   , position =     Static { xpos=0 , ypos = 0 , width = 5120 , height = 25 }
+   , position =     Static { xpos=0 , ypos = 0 , width = 5120 , height = 18 }
 
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text

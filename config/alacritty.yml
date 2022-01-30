@@ -67,7 +67,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  # opacity: 0.3
+  opacity: 0.75
 
   # Startup Mode (changes require restart)
   #
@@ -107,7 +107,6 @@ window:
   # Scrolling distance multiplier.
   #multiplier: 3
 
-background_opacity: 0.75
 
 # Font configuration
 font:
@@ -119,7 +118,9 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-  family: monospace
+    # family: Mononoki Nerd Font
+    #family: Fira Nerd Font
+    family: Hack
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
