@@ -1,6 +1,4 @@
 " ------------------- GENERAL SETTINGS --------------------------
-let g:mapleader = "\<Space>"
-
 " syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set wrap                              " Display long lines as just one line
@@ -23,8 +21,8 @@ set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=0                        " Always display the status line
 set number                              " Line numbers
+set relativenumber
 set cursorline                          " Enable highlighting of the current line
-set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
@@ -38,11 +36,3 @@ set termguicolors
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
-" You can't stop me
-cmap w!! w !sudo tee %
-
-" for autopairs plugin
-let g:AutoPairsShortcutToggle = '<C-S-a>'
-let g:AutoPairsShortcutFastWrap = '<C-S-e>'
-let g:AutoPairsShortcutJump = '<C-S-n>'
-let g:AutoPairsShortcutBackInsert = '<C-S-b>'
