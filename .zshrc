@@ -14,7 +14,7 @@ ZSH_THEME="random"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" "afowler" )
+ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -104,15 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias theme="alacritty-colorscheme"
-
-LIGHT_COLOR='base16-atelier-plateau-light.yml'
-DARK_COLOR='base16-atelier-plateau.yml'
-
-alias day="alacritty-colorscheme -V apply $LIGHT_COLOR"
-alias night="alacritty-colorscheme -V apply $DARK_COLOR"
-alias toggle="alacritty-colorscheme -V toggle $LIGHT_COLOR $DARK_COLOR"
 
 EDITOR="nvim"
 alias vi="nvim"
