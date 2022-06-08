@@ -3,7 +3,7 @@
 vim.keymap.set('n', '<leader>hm', function() require("harpoon.mark").add_file() end, opts)
 vim.keymap.set('n', '<leader>hh', function() require("harpoon.ui").toggle_quick_menu() end, opts)
 
-local harpoonremap = function(mapping, remap)
+local harpoonremap = function(mapping, num)
   vim.keymap.set('n', mapping, function() require("harpoon.ui").nav_file(num) end, opts)
 end
 

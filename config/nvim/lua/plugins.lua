@@ -41,27 +41,11 @@ return require('packer').startup(function()
 		end,
   }
 
-	-- LSP
-	use({
-		-- Autocomplete
-		"hrsh7th/nvim-cmp",
-		requires = {
-			"neovim/nvim-lspconfig",
-      "williamboman/nvim-lsp-installer",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-nvim-lua",
-			"kosayoda/nvim-lightbulb",
-		},
-		config = function()
-			require("configs.lsp")
-			require("configs.lsp_cmp")
-      require("configs.lsp_installer")
-			vim.cmd([[autocmd CursorHold,CursorHoldI * lua require("nvim-lightbulb").update_lightbulb()]])
-		end,
-	})
-
+  -- LSP with Coc
+  use {
+	"neoclide/coc.nvim",
+	branch = 'release'
+  }
 
   -- Colorizer
   use {
