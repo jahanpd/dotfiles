@@ -21,7 +21,7 @@ vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 
 -- Indents
-vim.o.tabstop = 4
+vim.o.tabstop = 2
 vim.o.shiftwidth = 4
 vim.o.smartindent = true
 

@@ -19,6 +19,8 @@ vim.api.nvim_exec(
 	false
 )
 
+vim.api.nvim_command('let g:coc_filetype_map = {"pandoc": "markdown"}')
+
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -44,8 +46,11 @@ return require('packer').startup(function()
   -- LSP with Coc
   use {
 	"neoclide/coc.nvim",
-	branch = 'release'
+	branch = 'release',
+  config = function()
+				end
   }
+
 
   -- Colorizer
   use {
@@ -99,3 +104,5 @@ return require('packer').startup(function()
 	})
 
 end)
+
+

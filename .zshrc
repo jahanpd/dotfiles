@@ -72,6 +72,7 @@ plugins=(
     fasd
     tmux
 	vi-mode
+	fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -123,3 +124,8 @@ function mkvenv {
 function cleartemp {
     ls ~/temp | xargs rm -r
 }
+
+# pnpm
+export PNPM_HOME="/Users/jahan/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

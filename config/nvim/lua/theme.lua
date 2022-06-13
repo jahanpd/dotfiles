@@ -2,7 +2,7 @@
 vim.o.background = "dark"
 vim.o.termguicolors = true
 vim.o.cursorline = true
-vim.o.colorcolumn = "80"
+-- vim.o.colorcolumn = "80"
 vim.o.wrap = true
 vim.cmd([[colorscheme gruvbox]])
 vim.cmd([[colorscheme gruvbox]])

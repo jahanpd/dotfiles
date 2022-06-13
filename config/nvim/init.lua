@@ -6,4 +6,3 @@ require("mappings")
 require("theme")
 
 vim.cmd([[colorscheme gruvbox]])
-

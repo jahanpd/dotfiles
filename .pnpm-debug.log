@@ -1,0 +1,40 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {},
+    "prefix": "/Users/jahan/Library/pnpm/global/5"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/jahan/Library/pnpm/store/v3",
+    "virtualStoreDir": "/Users/jahan/Library/pnpm/global/5/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/jahan/Library/pnpm/global/5",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "github.com/znck/grammarly/d4859a95ea0067803f7e30b4566abe5a15c4de6e",
+    "wanted": {
+      "dependentId": ".",
+      "rawSpec": "github:znck/grammarly"
+    }
+  },
+  "5 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "github.com/znck/grammarly/d4859a95ea0067803f7e30b4566abe5a15c4de6e",
+    "size": null,
+    "status": "started"
+  },
+  "6 error pnpm": {
+    "code": "ERR_PNPM_MISSING_PACKAGE_NAME",
+    "err": {
+      "name": "pnpm",
+      "message": "Can't install github:znck/grammarly: Missing package name",
+      "code": "ERR_PNPM_MISSING_PACKAGE_NAME",
+      "stack": "pnpm: Can't install github:znck/grammarly: Missing package name\n    at resolveDependency (/opt/homebrew/Cellar/pnpm/7.2.1/libexec/lib/node_modules/pnpm/dist/pnpm.cjs:116945:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async resolveDependenciesOfDependency (/opt/homebrew/Cellar/pnpm/7.2.1/libexec/lib/node_modules/pnpm/dist/pnpm.cjs:116711:39)\n    at async Promise.all (index 0)\n    at async resolveDependencies (/opt/homebrew/Cellar/pnpm/7.2.1/libexec/lib/node_modules/pnpm/dist/pnpm.cjs:116640:29)\n    at async resolveRootDependencies (/opt/homebrew/Cellar/pnpm/7.2.1/libexec/lib/node_modules/pnpm/dist/pnpm.cjs:116606:25)\n    at async /opt/homebrew/Cellar/pnpm/7.2.1/libexec/lib/node_modules/pnpm/dist/pnpm.cjs:117224:47\n    at async Promise.all (index 0)\n    at async default_1 (/opt/homebrew/Cellar/pnpm/7.2.1/libexec/lib/node_modules/pnpm/dist/pnpm.cjs:117194:7)\n    at async default_1 (/opt/homebrew/Cellar/pnpm/7.2.1/libexec/lib/node_modules/pnpm/dist/pnpm.cjs:118347:133)"
+    }
+  }
+}
