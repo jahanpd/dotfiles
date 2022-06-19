@@ -13,6 +13,15 @@ vim.keymap.set('n', '<C-Q>', function() vim.api.nvim_command('bdelete!') end, op
 -- Use control-c instead of escape
 vim.keymap.set('n', '<C-c>', '<Esc>', opts)
 
+-- Movement remap in insert mode
+vim.keymap.set('i', '<C-h>', '<Left>', opts)
+vim.keymap.set('i', '<C-l>', '<Right>', opts)
+vim.keymap.set('i', '<C-j>', '<Down>', opts)
+vim.keymap.set('i', '<C-k>', '<Up>', opts)
+vim.keymap.set('i', '<C-b>', '<Esc>bi', opts)
+vim.keymap.set('i', '<C-w>', '<Esc>wa', opts)
+vim.keymap.set('i', '<C-e>', '<Esc>ea', opts)
+
 -- Telescope remaps in telescope.lua
 
 -- Harpoon remaps in Harpoon.lua
