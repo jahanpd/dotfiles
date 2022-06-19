@@ -124,6 +124,11 @@ function mkvenv {
 function cleartemp {
     ls ~/temp | xargs rm -r
 }
+function nvimrc {
+		cd ~/.dotfiles
+		git pull
+		nvim ./config/nvim/init.lua
+}
 
 # pnpm
 export PNPM_HOME="/Users/jahan/Library/pnpm"
