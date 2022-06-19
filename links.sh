@@ -19,6 +19,15 @@ then
   rm ~/.zshrc
   ln -s ~/.dotfiles/.zshrc ~/.zshrc
 fi
+
+echo -n "Add alacritty (y/n)? "
+read answer
+if [[ $answer =~ ^[Yy]$ ]]
+then
+  rm ~/.config/alacritty/alacritty.yml
+  ln -s ~/.dotfiles/config/alacritty.yml ~/.config/alacritty/alacritty.yml
+fi
+
 echo -n "Add nvim (y/n)? "
 read answer
 if [[ $answer =~ ^[Yy]$ ]]
