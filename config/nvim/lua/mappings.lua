@@ -12,6 +12,9 @@ vim.keymap.set('n', '<C-Q>', function() vim.api.nvim_command('bdelete!') end, op
 
 -- Use control-c instead of escape
 vim.keymap.set('n', '<C-c>', '<Esc>', opts)
+-- Change scroll half down to ctrl shift U
+vim.keymap.set('n', '<S-k>', '<C-u>', opts)
+vim.keymap.set('n', '<S-j>', '<C-d>', opts)
 
 -- Movement remap in insert mode
 vim.keymap.set('i', '<C-h>', '<Left>', opts)
