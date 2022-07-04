@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 
 require("general")
-require("plugins")
 require("mappings")
+require("plugins")
 require("theme")
 
 vim.cmd([[colorscheme gruvbox]])
