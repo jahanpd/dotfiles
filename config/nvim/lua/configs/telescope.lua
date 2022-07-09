@@ -1,7 +1,8 @@
 -- Using Lua functions
 vim.keymap.set('n', '<leader>ff', function() require('telescope.builtin').find_files() end, opts)
 vim.keymap.set('n', '<leader>fg', function() require('telescope.builtin').live_grep() end, opts)
-vim.keymap.set('n', '<leader>fb', function() require('telescope.builtin').buffers() end, opts)
+vim.keymap.set('n', '<leader>fv', function() require('telescope.builtin').buffers() end, opts)
+vim.keymap.set('n', '<leader>fb', ":Telescope file_browser <CR>", opts)
 vim.keymap.set('n', '<leader>fh', function() require('telescope.builtin').help_tags() end, opts)
 
 require('telescope').setup{
@@ -33,5 +34,19 @@ require('telescope').setup{
     --   extension_config_key = value,
     -- }
     -- please take a look at the readme of the extension you want to configure
+		file_browser = {
+      theme = "ivy",
+      -- disables netrw and use telescope-file-browser in its place
+      hijack_netrw = true,
+      mappings = {
+        ["i"] = {
+          -- your custom insert mode mappings
+        },
+        ["n"] = {
+          -- your custom normal mode mappings
+        },
+      },
+    },
   }
 }
+require("telescope").load_extension "file_browser"

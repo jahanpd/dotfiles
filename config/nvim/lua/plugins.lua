@@ -25,12 +25,6 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Lualine
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
-
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
@@ -51,6 +45,14 @@ return require('packer').startup(function()
 				end
   }
 
+  -- Lualine
+  use {
+	'nvim-lualine/lualine.nvim',
+	requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  config = function()
+						
+				end
+  }
 
   -- Colorizer
   use {
@@ -79,6 +81,7 @@ return require('packer').startup(function()
     'gruvbox-community/gruvbox',
   }
 
+  use { "nvim-telescope/telescope-file-browser.nvim" }
   -- Telescope (Fuzzy finding)
 	use({
 		"nvim-telescope/telescope.nvim",
