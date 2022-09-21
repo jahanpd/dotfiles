@@ -27,6 +27,8 @@ import XMonad.Util.SpawnOnce
 import XMonad.Hooks.ManageDocks (avoidStruts, docksEventHook, manageDocks, ToggleStruts(..))
 -- layout features
 -- Layouts modifiers
+import XMonad.Hooks.EwmhDesktops
+import qualified XMonad.Util.Hacks as Hacks
 import XMonad.Layout.LayoutModifier
 import XMonad.Layout.LimitWindows (limitWindows, increaseLimit, decreaseLimit)
 import XMonad.Layout.Magnifier
@@ -236,7 +238,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- * NOTE: XMonad.Hooks.EwmhDesktops users must remove the obsolete
 -- ewmhDesktopsLayout modifier from layoutHook. It no longer exists.
 -- Instead use the 'ewmh' function from that module to modify your
--- defaultConfig as a whole. (See also logHook, handleEventHook, and
+-- defaltConfig as a whole. (See also logHook, handleEventHook, and
 -- startupHook ewmh notes.)
 --
 -- The available layouts.  Note that each layout is separated by |||,
@@ -302,7 +304,7 @@ myManageHook = composeAll
 -- It will add EWMH event handling to your custom event hooks by
 -- combining them with ewmhDesktopsEventHook.
 --
-myEventHook = mempty
+myEventHook = Hacks.windowedFullscreenFixEventHook
 
 ------------------------------------------------------------------------
 -- Status bars and logging
@@ -344,15 +346,7 @@ myStartupHook = do
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
-
--- A structure containing your configuration settings, overriding
--- fields in the default config. Any you don't override, will
--- use the defaults defined in xmonad/XMonad/Config.hs
---
--- No need to modify this.
---
-defaults = defaultConfig {
+main = xmonad $ ewmh $ def {
       -- simple stuff
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
