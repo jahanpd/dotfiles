@@ -45,7 +45,7 @@ import XMonad.Layout.WindowArranger (windowArrange, WindowArrangerMsg(..))
 import qualified XMonad.Layout.ToggleLayouts as T (toggleLayouts, ToggleLayout(Toggle))
 import qualified XMonad.Layout.MultiToggle as MT (Toggle(..))
 import XMonad.Layout.Gaps
-
+import XMonad.Util.EZConfig
 import XMonad.Layout.Spacing
 
 import XMonad.Hooks.FadeInactive
@@ -341,6 +341,7 @@ myStartupHook = do
     spawnOnce "nitrogen --restore &"
     spawnOnce "xcompmgr &"
     spawnOnce "xmobar ~/.dotfiles/config/.xmobarrc &"
+    spawnOnce "emacs --daemon"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
@@ -369,3 +370,9 @@ main = xmonad $ ewmh $ def {
         logHook            = myLogHook,
         startupHook        = myStartupHook
     }
+  `additionalKeysP`
+    [ ("M-i b", spawn "brave")
+		, ("M-e e", spawn "emacsclient -c -a 'emacs' ")
+		, ("M-e k", spawn "emacsclient -e '(kill-emacs)' ")
+		, ("M-e d", spawn "emacs --daemon ")
+    ]
