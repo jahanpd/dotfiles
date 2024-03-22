@@ -1,9 +1,10 @@
 -- Using Lua functions
-vim.keymap.set('n', '<leader>ff', function() require('telescope.builtin').find_files() end, opts)
-vim.keymap.set('n', '<leader>fg', function() require('telescope.builtin').live_grep() end, opts)
-vim.keymap.set('n', '<leader>fv', function() require('telescope.builtin').buffers() end, opts)
+vim.keymap.set('n', '<leader>ff', function() require('telescope.builtin').find_files() end, {desc = "find files with telescope"})
+vim.keymap.set('n', '<leader>fg', function() require('telescope.builtin').live_grep() end, {desc = "search files with grep telescope"})
+vim.keymap.set('n', '<leader>fv', function() require('telescope.builtin').buffers() end, {desc = "find buffer with telescope"})
 vim.keymap.set('n', '<leader>fb', ":Telescope file_browser <CR>", opts)
-vim.keymap.set('n', '<leader>fh', function() require('telescope.builtin').help_tags() end, opts)
+vim.keymap.set('n', '<leader>fh', function() require('telescope.builtin').help_tags() end, {desc = "search through help tags with telescope"})
+vim.keymap.set('n', '<leader>fk', function() require('telescope.builtin').keymaps() end, {desc = "search keymaps from normal mode with telescope"})
 
 require('telescope').setup{
   defaults = {
