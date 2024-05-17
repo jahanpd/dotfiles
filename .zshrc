@@ -113,7 +113,7 @@ export PATH=~/.local/bin/:$PATH
 # useful functions
 
 function venv {
-# source ~/envs/$1/bin/activate  # commented out by conda initialize
+ source ~/envs/$1/bin/activate  # commened out by conda initialize
 }
 function lsvenv {
     ls ~/envs
@@ -129,6 +129,10 @@ function nvimrc {
 		git pull
 		nvim ./config/nvim/init.lua
 }
+function loadkeys { 
+		export $(cat ~/.keys | xargs)
+}
+alias editkeys="nvim ~/.keys"
 
 # pnpm
 export PNPM_HOME="/Users/jahan/Library/pnpm"
