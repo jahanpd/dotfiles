@@ -4,7 +4,7 @@ Config {
      font =         "xft:Hack:size=12:antialias=true"
    , bgColor =      "#20201d"
    , fgColor =      "#a6a28c"
-   , position =     Static { xpos=0 , ypos = 0 , width = 5120 , height = 18 }
+   , position =     Static { xpos=0 , ypos = 0 , width = 2560 , height = 18 }
 
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text

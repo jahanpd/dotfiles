@@ -111,8 +111,34 @@ alias vi="nvim"
 # add to path
 export PATH=~/.local/bin/:$PATH
 
+<<<<<<< HEAD
 # my functions/aliases
 source ~/Sync/zsh_custom
+=======
+# useful functions
+
+function venv {
+ source ~/envs/$1/bin/activate  # commened out by conda initialize
+}
+function lsvenv {
+    ls ~/envs
+}
+function mkvenv {
+    python -m venv ~/envs/$1
+}
+function cleartemp {
+    ls ~/temp | xargs rm -r
+}
+function nvimrc {
+		cd ~/.dotfiles
+		git pull
+		nvim ./config/nvim/init.lua
+}
+function loadkeys { 
+		export $(cat ~/.keys | xargs)
+}
+alias editkeys="nvim ~/.keys"
+>>>>>>> refs/remotes/origin/main
 
 # pnpm
 export PNPM_HOME="/Users/jahan/Library/pnpm"
