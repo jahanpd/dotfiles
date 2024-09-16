@@ -11,10 +11,6 @@ return {
 				config = true
 		},
 		{
-				"nvim-telescope/telescope-file-browser.nvim",
-				dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-		},
-		{
 				'ThePrimeagen/harpoon',
 				dependencies = {"nvim-lua/plenary.nvim"},
 				config = function()

@@ -8,12 +8,15 @@ local harpoonremap = function(mapping, num)
 end
 
 harpoonremap('<C-a>', 1)
-harpoonremap('<C-l>', 2)
-harpoonremap('<C-s>', 3)
-harpoonremap('<C-k>', 4)
-harpoonremap('<C-d>', 5)
-harpoonremap('<C-j>', 6)
-harpoonremap('<C-f>', 7)
-harpoonremap('<C-h>', 8)
+harpoonremap('<C-s>', 2)
+harpoonremap('<C-d>', 3)
+harpoonremap('<C-f>', 4)
+harpoonremap('<C-g>', 5)
+
+harpoonremap('<C-h>', 6)
+harpoonremap('<C-j>', 7)
+harpoonremap('<C-k>', 8)
+harpoonremap('<C-l>', 9)
+harpoonremap('<C-;>', 10)
 
 

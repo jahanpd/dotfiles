@@ -111,11 +111,8 @@ alias vi="nvim"
 # add to path
 export PATH=~/.local/bin/:$PATH
 
-<<<<<<< HEAD
 # my functions/aliases
 source ~/Sync/zsh_custom
-=======
-# useful functions
 
 function venv {
  source ~/envs/$1/bin/activate  # commened out by conda initialize
@@ -137,8 +134,12 @@ function nvimrc {
 function loadkeys { 
 		export $(cat ~/.keys | xargs)
 }
+
 alias editkeys="nvim ~/.keys"
->>>>>>> refs/remotes/origin/main
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # pnpm
 export PNPM_HOME="/Users/jahan/Library/pnpm"

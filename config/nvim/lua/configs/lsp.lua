@@ -25,7 +25,9 @@ lsp_zero.extend_lspconfig({
 
 -- REQUIRE INSTALLED LSPs
 require'lspconfig'.basedpyright.setup{}
-
+require'lspconfig'.biome.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.astro.setup{}
 
 local cmp = require('cmp')
 
