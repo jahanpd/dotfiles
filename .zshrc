@@ -161,3 +161,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+. "/Users/jahan/.deno/env"
