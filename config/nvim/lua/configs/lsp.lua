@@ -1,4 +1,5 @@
 local lsp_zero = require('lsp-zero')
+local nvim_lsp = require('lspconfig')
 
 -- lsp_attach is where you enable features that only work
 -- if there is a language server active in the file
@@ -23,11 +24,23 @@ lsp_zero.extend_lspconfig({
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 -- REQUIRE INSTALLED LSPs
 require'lspconfig'.basedpyright.setup{}
 require'lspconfig'.biome.setup{}
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.ts_ls.setup{
+  on_attach = on_attach,
+  root_dir = nvim_lsp.util.root_pattern("package.json"),
+  single_file_support = false
+}
 require'lspconfig'.astro.setup{}
+
+require'lspconfig'.denols.setup{
+  on_attach = on_attach,
+  root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
+}
+
+
 
 local cmp = require('cmp')
 
