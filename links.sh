@@ -74,6 +74,8 @@ if [[ $answer =~ ^[Yy]$ ]]
 then
   rm ~/.tmux.conf
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	mkdir -p ~/.config/tmux/plugins/catppuccin
+  git clone -b v2.1.1 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
   ln -s ~/.dotfiles/config/.tmux.conf ~/.tmux.conf
 fi
 
