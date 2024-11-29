@@ -161,4 +161,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-. "/Users/jahan/.deno/env"
+. "/home/jahan/.deno/env"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
