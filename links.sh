@@ -2,8 +2,8 @@ echo -n "Add xmonad (y/n)? "
 read answer
 if [[ $answer =~ ^[Yy]$ ]]
 then
-  rm ~/.xmonad/xmonad.hs
-  ln -s ~/.dotfiles/config/xmonad.hs ~/.xmonad/xmonad.hs
+  rm -r ~/.config/xmonad
+  ln -s ~/.dotfiles/xmonad ~/.config/xmonad
 fi
 echo -n "Add xinitrc (y/n)? "
 read answer
@@ -24,8 +24,16 @@ echo -n "Add alacritty (y/n)? "
 read answer
 if [[ $answer =~ ^[Yy]$ ]]
 then
-  rm ~/.config/alacritty/alacritty.yml
-  ln -s ~/.dotfiles/config/alacritty.yml ~/.config/alacritty/alacritty.yml
+  rm -r ~/.config/alacritty
+  ln -s ~/.dotfiles/alacritty ~/.config/alacritty
+fi
+
+echo -n "Add kitty (y/n)? "
+read answer
+if [[ $answer =~ ^[Yy]$ ]]
+then
+  rm -r ~/.config/kitty
+  ln -s ~/.dotfiles/kitty ~/.config/kitty
 fi
 
 echo -n "Add nvim (y/n)? "
@@ -33,8 +41,33 @@ read answer
 if [[ $answer =~ ^[Yy]$ ]]
 then
   sudo rm -r ~/.config/nvim
-  ln -s ~/.dotfiles/config/nvim ~/.config/nvim
+  ln -s ~/.dotfiles/nvim ~/.config/nvim
 fi
+
+echo -n "Add hypr (y/n)? "
+read answer
+if [[ $answer =~ ^[Yy]$ ]]
+then
+  sudo rm -r ~/.config/hypr
+  ln -s ~/.dotfiles/hypr ~/.config/hypr
+fi
+
+echo -n "Add waybar (y/n)? "
+read answer
+if [[ $answer =~ ^[Yy]$ ]]
+then
+  sudo rm -r ~/.config/waybar
+  ln -s ~/.dotfiles/waybar ~/.config/waybar
+fi
+
+echo -n "Add rofi (y/n)? "
+read answer
+if [[ $answer =~ ^[Yy]$ ]]
+then
+  sudo rm -r ~/.config/rofi
+  ln -s ~/.dotfiles/rofi ~/.config/rofi
+fi
+
 echo -n "Add tmux (y/n)? "
 read answer
 if [[ $answer =~ ^[Yy]$ ]]

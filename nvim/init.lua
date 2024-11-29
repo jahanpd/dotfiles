@@ -25,10 +25,10 @@ require("theme")
 require("configs.lazy")
 
 vim.o.background="dark"
-vim.cmd([[colorscheme gruvbox]])
 
 require('lualine').setup{
 								options = { theme = 'auto' }
 						}
 
 require('configs.lsp')
+ vim.cmd([[colorscheme catppuccin]])
