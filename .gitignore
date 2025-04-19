@@ -1,0 +1,28 @@
+# Swap, backup, undo files
+./nvim/*.swp
+./nvim/*.swo
+./nvim/*.bak
+./nvim/*.tmp
+./nvim/*.un~
+
+# Plugin managers' data
+./nvim/pack/packer/start/**/.git
+./nvim/site/pack/*/start/**/.git
+
+# Lazy.nvim (if used)
+./nvim/lazy-lock.json
+
+# Optional: compiled Lua cache
+./nvim/lua/*/*.luac
+
+# Undo history (if stored here)
+./nvim/undo/*
+
+# LSP logs
+./nvim/log/
+
+# Node stuff (if using e.g. CoC)
+./nvim/node_modules/
+./nvim/package-lock.json
+
+

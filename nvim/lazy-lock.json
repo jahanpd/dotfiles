@@ -11,11 +11,7 @@
   "lsp-zero.nvim": { "branch": "v4.x", "commit": "2afa32e732d7b36e80cd5241fbdc4a38e123c4e0" },
   "lualine.nvim": { "branch": "master", "commit": "86fe39534b7da729a1ac56c0466e76f2c663dc42" },
   "nvim-cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },
-<<<<<<< HEAD
-  "nvim-lspconfig": { "branch": "master", "commit": "a56f4b9dde5daf3d4c7bb50cf78ab609537f2259" },
-=======
-  "nvim-lspconfig": { "branch": "master", "commit": "3a7387a9c980304059b2bd7075684d6ef98ff331" },
->>>>>>> 87628f9 (mac changes)
+  "nvim-lspconfig": { "branch": "master", "commit": "b70b900fba6e3255a5a8113c76f213102564cb0d" },
   "nvim-web-devicons": { "branch": "master", "commit": "c90dee4e930ab9f49fa6d77f289bff335b49e972" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "popup.nvim": { "branch": "master", "commit": "b7404d35d5d3548a82149238289fa71f7f6de4ac" },
