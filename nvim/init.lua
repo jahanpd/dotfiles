@@ -31,4 +31,10 @@ require('lualine').setup{
 						}
 
 require('configs.lsp')
- vim.cmd([[colorscheme catppuccin]])
+vim.cmd([[colorscheme catppuccin]])
+
+local opt = vim.opt
+
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldlevelstart = 99
