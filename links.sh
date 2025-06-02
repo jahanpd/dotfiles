@@ -1,24 +1,24 @@
-echo -n "Add xmonad (y/n)? "
-read answer
-if [[ $answer =~ ^[Yy]$ ]]
-then
-  rm -r ~/.config/xmonad
-  ln -s ~/.dotfiles/xmonad ~/.config/xmonad
-fi
-echo -n "Add xinitrc (y/n)? "
-read answer
-if [[ $answer =~ ^[Yy]$ ]]
-then
-  rm ~/.xinitrc
-  ln -s ~/.dotfiles/config/xinitrc ~/.xinitrc
-fi
-echo -n "Add zshrc (y/n)? "
-read answer
-if [[ $answer =~ ^[Yy]$ ]]
-then
-  rm ~/.zshrc
-  ln -s ~/.dotfiles/.zshrc ~/.zshrc
-fi
+# echo -n "Add xmonad (y/n)? "
+# read answer
+# if [[ $answer =~ ^[Yy]$ ]]
+# then
+#   rm -r ~/.config/xmonad
+#   ln -s ~/.dotfiles/xmonad ~/.config/xmonad
+# fi
+# echo -n "Add xinitrc (y/n)? "
+# read answer
+# if [[ $answer =~ ^[Yy]$ ]]
+# then
+#   rm ~/.xinitrc
+#   ln -s ~/.dotfiles/config/xinitrc ~/.xinitrc
+# fi
+# echo -n "Add zshrc (y/n)? "
+# read answer
+# if [[ $answer =~ ^[Yy]$ ]]
+# then
+#   rm ~/.zshrc
+#   ln -s ~/.dotfiles/.zshrc ~/.zshrc
+# fi
 
 echo -n "Add alacritty (y/n)? "
 read answer
@@ -68,14 +68,14 @@ then
   ln -s ~/.dotfiles/rofi ~/.config/rofi
 fi
 
-echo -n "Add tmux (y/n)? "
-read answer
-if [[ $answer =~ ^[Yy]$ ]]
-then
-  rm ~/.tmux.conf
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-	mkdir -p ~/.config/tmux/plugins/catppuccin
-  git clone -b v2.1.1 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
-  ln -s ~/.dotfiles/config/.tmux.conf ~/.tmux.conf
-fi
+# echo -n "Add tmux (y/n)? "
+# read answer
+# if [[ $answer =~ ^[Yy]$ ]]
+# then
+#   rm ~/.tmux.conf
+#   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# 	mkdir -p ~/.config/tmux/plugins/catppuccin
+#   git clone -b v2.1.1 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+#   ln -s ~/.dotfiles/config/.tmux.conf ~/.tmux.conf
+# fi
 
