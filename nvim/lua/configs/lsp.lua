@@ -40,7 +40,7 @@ require'lspconfig'.denols.setup{
   root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
 }
 
-require'elmls'.setup{}
+require'lspconfig'.elmls.setup{}
 
 local cmp = require('cmp')
 
