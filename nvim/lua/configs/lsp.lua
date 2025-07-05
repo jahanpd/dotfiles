@@ -40,22 +40,7 @@ require'lspconfig'.denols.setup{
   root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
 }
 
-require'lspconfig'.elm_ls.setup {
-  cmd = { "elm-language-server", "--stdio" },
-  filetypes = { "elm" },
-  root_dir = require("lspconfig").util.root_pattern("elm.json"),
-  settings = {
-    elmLS = {
-      elmPath = "elm",        -- adjust if elm is elsewhere
-      elmFormatPath = "elm-format",
-      elmTestPath = "elm-test",
-      trace = { server = "verbose" },
-      -- you can enable “dialyzer”-style hints:
-      enableElmAnalyse = true,
-    }
-  }
-}
-
+require'elmls'.setup{}
 
 local cmp = require('cmp')
 
