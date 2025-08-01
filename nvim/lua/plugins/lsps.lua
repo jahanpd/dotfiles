@@ -9,7 +9,6 @@ local feedkey = function(key, mode)
 end
 
 return {
-		{'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
 		{'neovim/nvim-lspconfig'},
 
 		{
@@ -19,8 +18,8 @@ return {
 						'hrsh7th/cmp-buffer',
 						'hrsh7th/cmp-path',
 						'hrsh7th/cmp-cmdline',
-						'hrsh7th/cmp-vsnip',
-						'hrsh7th/vim-vsnip'
+						-- 'hrsh7th/cmp-vsnip',
+						-- 'hrsh7th/vim-vsnip'
 				},
 				config = function()
 						local cmp = require("cmp")
@@ -28,7 +27,8 @@ return {
 								snippet = {
 									-- REQUIRED - you must specify a snippet engine
 									expand = function(args)
-										vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+										-- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+										vim.snippet.expand(args.body)
 									end,
 								},
 								window = {
@@ -62,7 +62,7 @@ return {
 										}),
 								sources = cmp.config.sources({
 									{ name = 'nvim_lsp' },
-									{ name = 'vsnip' }, -- For vsnip users.
+									-- { name = 'vsnip' }, -- For vsnip users.
 								}, {
 									{ name = 'buffer' },
 								})
