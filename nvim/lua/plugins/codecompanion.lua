@@ -1,13 +1,53 @@
+-- ADAPTERS FOR AI INFERENCE
+local openrouter = function()
+      return require("codecompanion.adapters").extend("openrouter", {
+        env = {
+          -- pick one:
+          api_key = "file:~/Sync/keys/openrouter",
+          -- api_key = "MY_CUSTOM_VAR_NAME",
+        },
+        schema = {
+          model = { default = "deepseek/deepseek-v4-flash-0731" },
+        },
+      })
+    end
+
+local adapters = {
+		http = {
+				openrouter = openrouter
+		}
+}
+-- OPTIONS
+local opts = {
+		adapters = adapters,
+    interactions = {
+      chat = {
+        adapter = "openrouter",
+        model = "deepseek/deepseek-v4-flash-0731"
+      },
+			inline = {
+        adapter = "openrouter",
+        model = "deepseek/deepseek-v4-flash-0731"
+			},
+		  cmd = {
+        adapter = "opencode",
+      },
+    },
+    -- NOTE: The log_level is in `opts.opts`
+    opts = {
+      log_level = "DEBUG",
+    },
+}
+
 return {
 		{
 			"olimorris/codecompanion.nvim",
 			version = "^19.0.0",
-			opts = {},
 			dependencies = {
 				"nvim-lua/plenary.nvim",
-				"nvim-treesitter/nvim-treesitter",
 			},
-		},
+			opts = opts
+	  },
 		{
 			"MeanderingProgrammer/render-markdown.nvim",
 			ft = { "markdown", "codecompanion" }
@@ -23,16 +63,5 @@ return {
 					},
 				},
 			},
-		},
-		-- Configure in your setup
-		require("codecompanion").setup({
-			extensions = {
-				history = {
-					enabled = true, -- defaults to true
-					opts = {
-						dir_to_save = vim.fn.stdpath("data") .. "/codecompanion_chats.json",
-					}
-				}
-			}
-		})
+		}
 }
