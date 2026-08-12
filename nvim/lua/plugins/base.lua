@@ -13,7 +13,7 @@ return {
 		{ "catppuccin/nvim",
 		  name = "catppuccin", 
 			priority = 1000 
-	},
+	  },
 		{
 				'ThePrimeagen/harpoon',
 				branch = "harpoon2",
