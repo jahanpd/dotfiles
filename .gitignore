@@ -11,6 +11,7 @@
 
 # Lazy.nvim (if used)
 ./nvim/lazy-lock.json
+*/lazy-lock.json
 
 # Optional: compiled Lua cache
 ./nvim/lua/*/*.luac
