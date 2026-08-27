@@ -18,6 +18,23 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- function for loading env keys
+local function load_key(path, var)
+  local f = io.open(vim.fn.expand(path), "r")
+  if not f then return nil end
+  local key = f:read("*l")
+  f:close()
+  key = key and key:gsub("%s+$", "")
+  if key and key ~= "" then
+    vim.env[var] = key
+    return key
+  end
+end
+
+-- loading keys
+load_key("~/Sync/keys/openrouter", "OPENROUTER_API_KEY")
+
+
 require("general")
 require("mappings")
 require("theme")

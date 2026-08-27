@@ -21,10 +21,12 @@ local adapters = {
 local opts = {
 		adapters = adapters,
     interactions = {
+		  -- for the basic chat interface
       chat = {
         adapter = "openrouter",
         model = "deepseek/deepseek-v4-flash-0731"
       },
+
 			inline = {
         adapter = "openrouter",
         model = "deepseek/deepseek-v4-flash-0731"
@@ -32,11 +34,41 @@ local opts = {
 		  cmd = {
         adapter = "opencode",
       },
+			cli = {
+					agent = "opencode",
+					agents = {
+							opencode = {
+									cmd = "opencode",
+									args = {},
+									description = "Opencode CLI",
+									provider = "terminal",
+							},
+					},
+			},
     },
     -- NOTE: The log_level is in `opts.opts`
     opts = {
       log_level = "DEBUG",
     },
+    -- MCP SERVERS
+		mcp = {
+				servers = {
+					-- The function is called once, only when the server is first needed.
+					["mimic"] = function()
+						return {
+							cmd = {
+									"/run/current-system/sw/bin/uv",
+									"run",
+									"--directory", "/Users/jahan/Sync/mcp/mimiciv",
+									"mimic-mcp",
+							},
+							env = {
+								GCP_PROJECT_ID = "auspicious-silo-247823"
+							},
+						}
+					end,
+			},
+  },
 }
 
 return {

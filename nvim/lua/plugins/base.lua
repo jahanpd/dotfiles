@@ -21,11 +21,5 @@ return {
 				config = function()
 						require('../configs.harpoon')
 				end
-		},
-		{
-			"nvim-treesitter/nvim-treesitter",
-			branch = "main",
-			lazy = false,
-			build = ":TSUpdate",
 		}
 }
